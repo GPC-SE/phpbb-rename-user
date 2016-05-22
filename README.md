@@ -17,6 +17,6 @@ account the whitelist points.
 
 ## Installation
 
-clone it into phpBB3/ext/gpc/rename_users
+clone it into phpBB3/ext/gpc/rename_user
 
 
