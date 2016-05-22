@@ -1,0 +1,8 @@
+Subject: Nickname in der GPC
+
+Hi,
+
+ich habe dich umbenannt in "{NEW_USERNAME}".
+
+Viele Grüße,
+    {ADMIN_USERNAME}

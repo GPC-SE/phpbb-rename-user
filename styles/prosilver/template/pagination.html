@@ -1,0 +1,18 @@
+<div class="pagination" style="margin:5px">
+{ON_PAGE}
+<ul>
+<!-- BEGIN PAGINATION -->
+	<!-- IF PAGINATION.S_IS_PREV -->
+	<li class="previous"><a href="{PAGINATION.PAGE_URL}" rel="prev" role="button">{L_PREVIOUS}</a></li>
+	<!-- ELSEIF PAGINATION.S_IS_CURRENT -->
+	<li class="active"><span>{PAGINATION.PAGE_NUMBER}</span></li>
+	<!-- ELSEIF PAGINATION.S_IS_ELLIPSIS -->
+	<li class="ellipsis" role="separator"><span>{L_ELLIPSIS}</span></li>
+	<!-- ELSEIF PAGINATION.S_IS_NEXT -->
+	<li class="next"><a href="{PAGINATION.PAGE_URL}" rel="next" role="button">{L_NEXT}</a></li>
+	<!-- ELSE -->
+	<li><a href="{PAGINATION.PAGE_URL}" role="button">{PAGINATION.PAGE_NUMBER}</a></li>
+	<!-- ENDIF -->
+<!-- END PAGINATION -->
+</ul>
+</div>

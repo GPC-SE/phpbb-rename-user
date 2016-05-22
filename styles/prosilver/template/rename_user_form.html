@@ -1,0 +1,94 @@
+<!-- IF NOTICE_MSG -->
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+		<h2><span style="color:orange">{L_NOTICE}</span></h2>
+		<div class="error">{NOTICE_MSG}</div>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF ERROR_MSG -->
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<h2><span class="error">{L_ERROR}</span></h2>
+		<div class="error">{ERROR_MSG}</div>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF SUCCESS_RENAME -->
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+		<h2>{L_SUCCESS_RENAME_HEAD}</h2>
+		<div>{SUCCESS_RENAME}</div>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ELSEIF SUCCESS_TAKEOVER -->
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+		<h2>{L_SUCCESS_TAKEOVER_HEAD}</h2>
+		<div>{SUCCESS_TAKEOVER}</div>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ELSE -->
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<div class="content">
+		<h2>{L_RENAME_USER}</h2>
+		
+		<form action="{RENAME_ACTION}" method="post" id="rename_form">
+			<fieldset class="fields1">
+				<dl>
+					<dt><label for="user">{L_CURRENT_USERNAME}:</label></dt>
+					<dd><input type="text" name="current_username" id="current_user" size="25" value="{CURRENT_USERNAME}" class="inputbox autowidth" />
+						<strong><a href="{U_FIND_USERNAME}&amp;form=rename_form&amp;field=current_user&amp;select_single=1" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a></strong></dd>
+				</dl>
+				<dl>
+					<dt><label for="user">{L_NEW_USERNAME}:</label></dt>
+					<dd><input type="text" name="new_username" size="25" value="{NEW_USERNAME}" class="inputbox autowidth" /></dd>
+				</dl>
+			</fieldset>
+			<fieldset class="submit-buttons">
+				<input type="submit" name="submit" value="{L_RENAME_USER}" class="button1" />
+			</fieldset>
+		</form>
+	</div>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<div class="content">
+		<h2>{L_TAKEOVER_USER}</h2>
+			<form action="{TAKEOVER_ACTION}" method="post" id="takeover_form">
+			<fieldset class="fields1">
+				<dl>
+					<dt><label for="user">{L_OLD_USERNAME}:</label></dt>
+					<dd><input type="text" name="old_username" id="old_user" size="25" value="{OLD_USERNAME}" class="inputbox autowidth" />
+						<strong><a href="{U_FIND_USERNAME}&amp;form=takeover_form&amp;field=old_user&amp;select_single=1" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a></strong></dd>
+				</dl>
+				<dl>
+					<dt><label for="user">{L_NEW_USERNAME}:</label></dt>
+					<dd><input type="text" name="new_username" id="new_user" size="25" value="{NEW_USERNAME}" class="inputbox autowidth" />
+						<strong><a href="{U_FIND_USERNAME}&amp;form=takeover_form&amp;field=new_user&amp;select_single=1" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a></strong></dd>
+				</dl>
+				<dl>
+					<dt>{L_BAN_OLD_ACCOUNT_AUTOMATICALLY}</dt>
+					<dd><input name="ban_old_account_automatically" value="ban_old_account_automatically" type="checkbox" checked="checked"></dd>
+				</dl>
+			</fieldset>
+			<fieldset class="submit-buttons">
+				<input type="submit" name="submit" value="{L_TAKEOVER_USER}" class="button1" />
+			</fieldset>
+		</form>
+	</div>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->

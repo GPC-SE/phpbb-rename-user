@@ -1,0 +1,8 @@
+Subject: Nickname in the GPC
+
+Hi,
+
+I renamed your account to "{NEW_USERNAME}".
+
+Best greets,
+    {ADMIN_USERNAME}

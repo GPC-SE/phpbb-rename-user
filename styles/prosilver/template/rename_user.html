@@ -1,0 +1,30 @@
+<!-- INCLUDE overall_header.html -->
+
+<!-- IF S_ADMIN -->
+<!-- INCLUDE rename_user_form.html -->
+<!-- ENDIF -->
+
+<h3>{L_RENAMINGS}</h3>
+
+<!-- INCLUDE pagination.html -->
+
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>{L_OLD_USERNAME}</th>
+		<th>{L_NEW_USERNAME}</th>
+		<th>{L_DATE}</th>
+		<th>{L_NEW_ACCOUNT}</th>
+	</tr>
+	<!-- BEGIN rename_table -->
+	<tr class="<!-- IF rename_table.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+		<td>{rename_table.OLD_USERNAME}</td>
+		<td>{rename_table.NEW_USERNAME}</td>
+		<td>{rename_table.DATE}</td>
+		<td>{rename_table.NEW_ACCOUNT}</td>
+	</tr>
+	<!-- END rename_table -->
+</table>
+
+<!-- INCLUDE pagination.html -->
+
+<!-- INCLUDE overall_footer.html -->
