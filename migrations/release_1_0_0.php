@@ -24,12 +24,12 @@ class release_1_0_0 extends \phpbb\db\migration\migration
 			'add_tables'	=> array(
 				$this->table_prefix . constants::RENAME_USERS_TABLE => array(
 					'COLUMNS'	=> array(
-						'id'	=> array('UINT', NULL, 'auto_increment'),
-						'user_id_old'	=> array('UINT', NULL),
-						'user_id_new'	=> array('UINT', NULL),
+						'id'	=> array('UINT', null, 'auto_increment'),
+						'user_id_old'	=> array('UINT', null),
+						'user_id_new'	=> array('UINT', null),
 						'username_old'	=> array('VCHAR:255', ''),
 						'username_new'	=> array('VCHAR:255', ''),
-						'date_time'	=> array('TIMESTAMP', NULL),
+						'date_time'	=> array('TIMESTAMP', null),
 					),
 					'PRIMARY_KEY'	=> 'id',
 				),

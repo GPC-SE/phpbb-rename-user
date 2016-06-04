@@ -209,9 +209,9 @@ class main
 
 				// take over the Blacklist-points ( = negative & neutral ratings but not the positiv ratings.
 				$sql = 'UPDATE ' . USERS_TABLE . "
-						SET whitelist_neutral = '".(((int)$new_user['whitelist_neutral']) + ((int)$old_user['whitelist_neutral']))."',
-							whitelist_negativ = '".(((int)$new_user['whitelist_negativ']) + ((int)$old_user['whitelist_negativ']))."'
-						WHERE user_id = ". ((int)$new_user['user_id']) .';';
+						SET whitelist_neutral = '".(((int) $new_user['whitelist_neutral']) + ((int) $old_user['whitelist_neutral']))."',
+							whitelist_negativ = '".(((int) $new_user['whitelist_negativ']) + ((int) $old_user['whitelist_negativ']))."'
+						WHERE user_id = ". ((int) $new_user['user_id']) .';';
 				$result = $this->db->sql_query($sql);
 
 				if ( ! $result)
@@ -233,8 +233,8 @@ class main
 														username_old,
 														username_new,
 														date_time )
-													VALUES ('". ((int)$old_user['user_id']) ."',
-														'". ((int)$new_user['user_id']) ."',
+													VALUES ('". ((int) $old_user['user_id']) ."',
+														'". ((int) $new_user['user_id']) ."',
 														'". $this->db->sql_escape($old_user['username']) ."',
 														'". $this->db->sql_escape($new_user['username']) ."',
 														'".time()."');");
@@ -291,7 +291,7 @@ class main
 				}
 				else
 				{
-					$current_user_post_count = (int)$current_user['user_posts'];
+					$current_user_post_count = (int) $current_user['user_posts'];
 					if ($current_user_post_count > constants::MAX_POSTS)
 					{
 						$this->template->assign_var('ERROR_MSG', $this->user->lang('USER_HAS_TOO_MANY_POSTS', $current_user['username'], constants::MAX_POSTS, $current_user_post_count));
@@ -314,8 +314,8 @@ class main
 						$result = $this->db->sql_query("INSERT INTO `". $this->table_prefix . constants::RENAME_USERS_TABLE . "` (user_id_old, user_id_new,
 																					username_old, username_new,
 																					date_time )
-													VALUES ('". ((int)$current_user['user_id']) ."',
-														'". ((int)$current_user['user_id']) ."',
+													VALUES ('". ((int) $current_user['user_id']) ."',
+														'". ((int) $current_user['user_id']) ."',
 														'". $this->db->sql_escape($current_user['username']) ."',
 														'". $this->db->sql_escape($new_username) ."',
 													'".time()."');");
