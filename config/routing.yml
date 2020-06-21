@@ -1,4 +1,4 @@
 gpc_rename_user_controller:
-    pattern: /rename_user
+    path: /rename_user
     defaults: { _controller: gpc.rename_user.controller:show }
 

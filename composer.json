@@ -3,7 +3,7 @@
 	"type": "phpbb-extension",
 	"description": "Adds page to handle user renaming with respect to the whitelist.",
 	"homepage": "http://www.penspinning.de",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"time": "2016-05-22",
 	"keywords": ["phpbb", "extension", "gpc", "rename_user", "rename", "user"],
 	"license": "GPL-2.0",
@@ -22,7 +22,7 @@
 	"extra": {
 		"display-name": "GPC Rename User",
 		"soft-require": {
-			"phpbb/phpbb": "3.2.*"
+			"phpbb/phpbb": "3.3.*"
 		}
 	}
 }
